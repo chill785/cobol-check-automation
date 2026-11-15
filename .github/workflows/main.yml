@@ -14,6 +14,10 @@ jobs:
         java-version: '25'
         distribution: 'semeru'
 
+    - name: Install Zowe CLI
+      run: |
+        npm install -g @zowe/cli@zowe-v2-lts    
+
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
         ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
