@@ -11,8 +11,8 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v5
       with:
-        java-version: '11'
-        distribution: 'semeru 25'
+        java-version: '25'
+        distribution: 'semeru'
     - name: Setup Mainframe Environment and Upload COBOL Check
       env:
         ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
