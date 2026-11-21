@@ -5,11 +5,11 @@
 LOWERCASE_USERNAME=$( echo "$ZOWE_USERNAME" | tr '[:upper:] ' '[:lower:] ')
 
 # Check if directory exists, create if it doesn't
-if ! zowe zos-files list uss-files "/z/$LOWERCASE_USERNAME/cobolcheck" &>/dev/null; then
-  echo "Directory does not exist. Creating it ..."
-  zowe zos-files create uss-directory /z/$LOWERCASE_USERNAME/cobolcheck
+if ! zowe zos-files list uss "/z/$LOWERCASE_USERNAME/cobolcheck" --response-timeout 30 &>/dev/null; then
+    echo "Directory does not exist. Creating it..."
+    zowe zos-files create uss-directory "/z/$LOWERCASE_USERNAME/cobolcheck"
 else
-  echo "Directory already exists."
+    echo "Directory already exists."
 fi
 
 # Upload files
