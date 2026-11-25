@@ -13,7 +13,7 @@ else
 fi
 
 # Upload files
-zowe zos-files upload dir-to-uss "./cobol-check/scripts" "/z/$LOWERCASE_USERNAME/cobolcheck/scripts" --recursive 
+zowe zos-files upload dir-to-uss "./cobol-check/src" "/z/$LOWERCASE_USERNAME/cobolcheck/src" --recursive 
 # --binary-files "cobol-check-0.2.9.jar"
 
 # Verify upload
