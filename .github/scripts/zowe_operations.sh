@@ -17,4 +17,4 @@ zowe zos-files upload dir-to-uss "./cobol-check" "/z/$LOWERCASE_USERNAME/cobolch
 
 # Verify upload
 echo "Verifying upload:"
-zowe zos-files list uss "/z/$LOWERCASE_USERNAME/cobolcheck" --response-timeout 30
+zowe zos-files list uss-files "/z/$LOWERCASE_USERNAME/cobolcheck" --response-timeout 30
